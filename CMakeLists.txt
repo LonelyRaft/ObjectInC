@@ -1,0 +1,11 @@
+cmake_minimum_required(VERSION 3.20)
+project(Main)
+set(CMAKE_C_STANDARD 99)
+set(CMAKE_C_STANDARD_REQUIRED true)
+set(CMAKE_BUILD_TYPE "Debug")
+add_subdirectory(Point)
+add_subdirectory(Circle)
+add_subdirectory(Rect)
+add_executable(${PROJECT_NAME} main.c)
+target_link_libraries (${PROJECT_NAME} m Point Circle Rect) 
+
